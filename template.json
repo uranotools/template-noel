@@ -1,0 +1,167 @@
+{
+  "kind": "template",
+  "apiVersion": 2,
+  "id": "urano-noel",
+  "name": "Noël · Winter Workshop",
+  "version": "2.0.1",
+  "description": "Un taller de invierno para tus agentes: abeto, papel cálido y recetas para cerrar el año con intención. MIT · ES/EN.",
+  "font": {
+    "file": "fonts/WorkSans-Variable.ttf"
+  },
+  "theme": {
+    "light": {
+      "background": "42 35% 96%",
+      "foreground": "158 22% 15%",
+      "card": "42 40% 99%",
+      "card-foreground": "158 22% 15%",
+      "popover": "42 40% 99%",
+      "popover-foreground": "158 22% 15%",
+      "primary": "158 32% 25%",
+      "primary-foreground": "42 40% 98%",
+      "secondary": "40 23% 90%",
+      "secondary-foreground": "158 24% 22%",
+      "muted": "40 20% 92%",
+      "muted-foreground": "150 9% 39%",
+      "accent": "350 32% 92%",
+      "accent-foreground": "350 48% 30%",
+      "border": "40 17% 81%",
+      "input": "40 17% 74%",
+      "ring": "158 32% 30%",
+      "sidebar-background": "155 28% 95%",
+      "sidebar-foreground": "158 26% 19%",
+      "sidebar-primary": "158 32% 25%",
+      "sidebar-primary-foreground": "42 40% 98%",
+      "sidebar-accent": "155 23% 87%",
+      "sidebar-accent-foreground": "158 32% 20%",
+      "sidebar-border": "155 15% 80%",
+      "sidebar-ring": "158 32% 30%"
+    },
+    "dark": {
+      "background": "155 24% 12%",
+      "foreground": "42 25% 91%",
+      "card": "155 22% 15%",
+      "card-foreground": "42 25% 91%",
+      "popover": "155 22% 16%",
+      "popover-foreground": "42 25% 91%",
+      "primary": "42 48% 72%",
+      "primary-foreground": "156 25% 10%",
+      "secondary": "156 16% 20%",
+      "secondary-foreground": "42 25% 91%",
+      "muted": "156 15% 17%",
+      "muted-foreground": "145 12% 70%",
+      "accent": "350 25% 24%",
+      "accent-foreground": "350 50% 89%",
+      "border": "155 15% 26%",
+      "input": "155 14% 33%",
+      "ring": "42 48% 72%",
+      "sidebar-background": "155 25% 11%",
+      "sidebar-foreground": "42 25% 88%",
+      "sidebar-primary": "42 48% 72%",
+      "sidebar-primary-foreground": "156 25% 10%",
+      "sidebar-accent": "155 20% 20%",
+      "sidebar-accent-foreground": "42 25% 93%",
+      "sidebar-border": "155 15% 25%",
+      "sidebar-ring": "42 48% 72%"
+    }
+  },
+  "layout": {
+    "direction": "row",
+    "children": [
+      {
+        "slot": "sidebar"
+      },
+      {
+        "direction": "column",
+        "children": [
+          {
+            "slot": "header"
+          },
+          {
+            "slot": "subheader"
+          },
+          {
+            "direction": "row",
+            "children": [
+              {
+                "slot": "content"
+              },
+              {
+                "slot": "assistant"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "surfaces": {
+    "navigation": "studio",
+    "header": "studio",
+    "chat": "studio"
+  },
+  "components": {
+    "navigation": "noel-navigation",
+    "header": "noel-header",
+    "history": "noel-history",
+    "welcome": "noel-welcome"
+  },
+  "loading": {
+    "label": "Encendiendo el taller de invierno",
+    "labelEn": "Lighting up the winter workshop"
+  },
+  "views": [
+    {
+      "id": "noel-navigation",
+      "title": "Noël · Navegación",
+      "bundle": "ui/bundle.js",
+      "capabilities": [
+        "appearance.read",
+        "surface.read",
+        "surface.act"
+      ]
+    },
+    {
+      "id": "noel-header",
+      "title": "Noël · Cabecera",
+      "bundle": "ui/bundle.js",
+      "capabilities": [
+        "appearance.read",
+        "surface.read",
+        "surface.act"
+      ]
+    },
+    {
+      "id": "noel-history",
+      "title": "Noël · Conversaciones",
+      "bundle": "ui/bundle.js",
+      "capabilities": [
+        "appearance.read",
+        "surface.read",
+        "surface.act"
+      ]
+    },
+    {
+      "id": "noel-welcome",
+      "title": "Noël · Bienvenida",
+      "bundle": "ui/bundle.js",
+      "capabilities": [
+        "appearance.read",
+        "surface.read",
+        "surface.act"
+      ]
+    },
+    {
+      "id": "winter-workshop",
+      "title": "Noël · Taller de invierno",
+      "bundle": "ui/bundle.js",
+      "capabilities": [
+        "appearance.read",
+        "navigation.open"
+      ]
+    }
+  ],
+  "presentation": {
+    "composerDecoration": "snow",
+    "scrollbars": "native"
+  }
+}
